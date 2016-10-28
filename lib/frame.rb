@@ -1,6 +1,7 @@
 class Frame
-  def initialize
+  def initialize(max_rolls)
     @rolls = []
+    @max_rolls = max_rolls
   end
 
   def rolls(pins)
@@ -36,7 +37,7 @@ class Frame
   end
 
   def max_rolls_for_frame
-    2
+    @max_rolls
   end
 
   def max_score?

@@ -1,8 +1,13 @@
 class Table
-  def initialize
+  def initialize(frames_count:, max_rolls_for_frame:, max_rolls_for_last_frame:)
     @current_frame_position = 0
     @total_score = 0
-    @frames = 9.times.map { Frame.new } << LastFrame.new
+    @frames = (frames_count-1).times.map { Frame.new(max_rolls_for_frame) }
+    if max_rolls_for_frame == max_rolls_for_last_frame
+      @frames << Frame.new(max_rolls_for_frame)
+    else
+      @frames << LastFrame.new(max_rolls_for_last_frame)
+    end
   end
 
   def rolls(pins)
