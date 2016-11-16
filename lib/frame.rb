@@ -1,7 +1,8 @@
 class Frame
-  def initialize(max_rolls)
+  def initialize(max_rolls, pins)
     @rolls = []
     @max_rolls = max_rolls
+    @pins = pins
   end
 
   def rolls(pins)
@@ -33,7 +34,7 @@ class Frame
   end
 
   def max_rolls?
-    @rolls.count == max_rolls_for_frame
+    max_rolls_for_frame.nil? ? false : @rolls.count == max_rolls_for_frame
   end
 
   def max_rolls_for_frame
@@ -41,6 +42,6 @@ class Frame
   end
 
   def max_score?
-    score == 10
+    score == @pins
   end
 end

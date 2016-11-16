@@ -1,8 +1,8 @@
 require_relative '../test_case'
 
-class BowlingGameTest < Test::Unit::TestCase
+class TerranBowlingGameTest < Test::Unit::TestCase
   setup do
-    @game = BowlingGame.new
+    @game = TerranBowlingGame.new
   end
 
   def test_gutter_game

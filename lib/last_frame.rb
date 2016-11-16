@@ -1,6 +1,6 @@
 class LastFrame < Frame
   def is_done?
-    (@rolls.count == @max_rolls-1 && score < 10) || max_rolls?
+    (@rolls.count > 1 && score < @pins) || max_rolls?
   end
 
   def max_score?
