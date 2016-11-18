@@ -1,4 +1,4 @@
-class MartianBowlingGame < BowlingGame
+class MartianBowlingGame < TerranBowlingGame
   def frames_count
     12
   end
