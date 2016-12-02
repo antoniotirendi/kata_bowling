@@ -1,9 +1,14 @@
 class LastFrame < Frame
-  def is_done?
-    (@rolls.count > 1 && score < @pins) || max_rolls?
+  def initialize(max_rolls_for_frame, max_rolls_for_frames, pins)
+    super(max_rolls_for_frame, pins)
+    @max_rolls_for_frames = max_rolls_for_frames
   end
 
-  def max_score?
-    score == 30
+  def is_done?
+    if max_rolls_for_frame == @max_rolls_for_frames
+      max_rolls?
+    else
+      (@rolls.count > 1 && score < @pins) || max_rolls?
+    end
   end
 end

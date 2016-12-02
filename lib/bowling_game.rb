@@ -1,7 +1,8 @@
 class BowlingGame
   def initialize
-    @table = Table.new(frames_count: frames_count, max_rolls_for_frame: max_rolls_for_frame,
-                       max_rolls_for_last_frame: max_rolls_for_last_frame, pins_configuration: pins_configuration)
+    @table = Table.new(pins_configuration: pins_configuration,
+                       max_rolls_for_frame: max_rolls_for_frame,
+                       max_rolls_for_last_frame: max_rolls_for_last_frame)
   end
 
   def roll(pins)

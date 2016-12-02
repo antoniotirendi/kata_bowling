@@ -1,8 +1,8 @@
 class Table
-  def initialize(frames_count:, max_rolls_for_frame:, max_rolls_for_last_frame:, pins_configuration:)
+  def initialize(pins_configuration:,max_rolls_for_frame:, max_rolls_for_last_frame:)
     @current_frame_position = 0
     @total_score = 0
-    @frames = pins_configuration[0..-2].map {|pins| Frame.new(max_rolls_for_frame, pins) }
+    @frames = pins_configuration[0..-2].map { |pins| Frame.new(max_rolls_for_frame, pins) }
     add_last_frame(max_rolls_for_frame, max_rolls_for_last_frame, pins_configuration.last)
   end
 
@@ -30,10 +30,6 @@ class Table
   end
 
   def add_last_frame(max_rolls_for_frame, max_rolls_for_last_frame, pins)
-    if max_rolls_for_frame == max_rolls_for_last_frame
-      @frames << Frame.new(max_rolls_for_frame, pins)
-    else
-      @frames << LastFrame.new(max_rolls_for_last_frame, pins)
-    end
+    @frames << LastFrame.new(max_rolls_for_last_frame, max_rolls_for_frame, pins)
   end
 end

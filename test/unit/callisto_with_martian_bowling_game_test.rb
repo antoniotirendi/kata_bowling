@@ -7,10 +7,20 @@ class CallistoWithMartianBowlingGameTest < Test::Unit::TestCase
   end
 
   def test_martian_and_callisto
-    11.times { 3.times { @game.roll(0) } }
+    11.times { gutter_frame }
 
-    7.times {@game.roll(10)}
+    7.times { strike_for_frame }
 
     assert_equal 70, @game.score
+  end
+
+  private
+
+  def gutter_frame
+    3.times { @game.roll(0) }
+  end
+
+  def strike_for_frame
+    @game.roll(10)
   end
 end
