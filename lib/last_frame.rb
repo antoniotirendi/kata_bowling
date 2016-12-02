@@ -6,8 +6,4 @@ class LastFrame < Frame
   def max_score?
     score == 30
   end
-
-  def bonus_for_strike
-    @rolls[0..1].inject(0, :+)
-  end
 end

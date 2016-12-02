@@ -35,10 +35,10 @@ class MartianBowlingGameTest < Test::Unit::TestCase
 
     @game.roll(2)
     @game.roll(3)
-    @game.roll(0)
+    @game.roll(2)
 
     10.times { 3.times { @game.roll(0) } }
 
-    assert_equal 20, @game.score
+    assert_equal 22, @game.score
   end
 end

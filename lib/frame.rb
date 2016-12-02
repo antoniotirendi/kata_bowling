@@ -26,7 +26,7 @@ class Frame
   end
 
   def bonus_for_strike
-    score
+    @rolls[0..1].inject(0, :+)
   end
 
   def is_done?
