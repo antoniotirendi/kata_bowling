@@ -34,7 +34,7 @@ class Frame
   end
 
   def max_rolls?
-    max_rolls_for_frame.nil? ? false : @rolls.count == max_rolls_for_frame
+    @rolls.count == max_rolls_for_frame
   end
 
   def max_rolls_for_frame

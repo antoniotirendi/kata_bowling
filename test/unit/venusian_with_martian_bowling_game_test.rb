@@ -1,7 +1,10 @@
 require_relative '../test_case'
 
 class VenusianWithMartianBowlingGameTest < Test::Unit::TestCase
-  # VENUSIAN RULES        a pin for first frame, and increase of one each next frame  (other rules as martian: 12 FRAMES AND 3 ROLLS FOR FRAME)
+  # VENUSIAN RULES
+  # a pin for first frame, and increase of one each next frame
+  # other rules as martian:
+  # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
     @game = VenusianWithMartianBowlingGame.new
   end

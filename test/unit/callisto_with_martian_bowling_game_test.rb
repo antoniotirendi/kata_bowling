@@ -1,7 +1,10 @@
 require_relative '../test_case'
 
 class CallistoWithMartianBowlingGameTest < Test::Unit::TestCase
-  # CALLISTO RULES     when last roll is 10 you may keep rolling
+  # CALLISTO RULES
+  # when last roll is 10 you may keep rolling
+  # other rules as martian:
+  # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
     @game = CallistoWithMartianBowlingGame.new
   end

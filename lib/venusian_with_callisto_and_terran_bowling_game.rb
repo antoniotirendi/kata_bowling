@@ -1,0 +1,3 @@
+class VenusianWithCallistoAndTerranBowlingGame < CallistoWithTerranBowlingGame
+  include VenusianModule
+end

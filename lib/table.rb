@@ -1,5 +1,5 @@
 class Table
-  def initialize(pins_configuration:,max_rolls_for_frame:, max_rolls_for_last_frame:)
+  def initialize(pins_configuration:, max_rolls_for_frame:, max_rolls_for_last_frame:)
     @current_frame_position = 0
     @total_score = 0
     @frames = pins_configuration[0..-2].map { |pins| Frame.new(max_rolls_for_frame, pins) }

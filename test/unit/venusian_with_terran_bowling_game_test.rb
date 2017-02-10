@@ -1,7 +1,9 @@
 require_relative '../test_case'
 
 class VenusianWithTerranBowlingGameTest < Test::Unit::TestCase
-  # VENUSIAN RULES        a pin for first frame, and increase of one each next frame  (other rules as terran)
+  # VENUSIAN RULES
+  # a pin for first frame, and increase of one each next frame
+  # other rules as terran
   setup do
     @game = VenusianWithTerranBowlingGame.new
   end
@@ -67,5 +69,4 @@ class VenusianWithTerranBowlingGameTest < Test::Unit::TestCase
   def strike_for_frame(frame_number)
     @game.roll(frame_number)
   end
-
 end

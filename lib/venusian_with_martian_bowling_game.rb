@@ -1,5 +1,3 @@
 class VenusianWithMartianBowlingGame < MartianBowlingGame
-  def pins_configuration
-    (1..frames_count).to_a
-  end
+  include VenusianModule
 end

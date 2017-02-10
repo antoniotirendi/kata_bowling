@@ -1,7 +1,8 @@
 require_relative '../test_case'
 
 class MartianBowlingGameTest < Test::Unit::TestCase
-  # MARTIAN RULES         12 FRAMES AND 3 ROLLS FOR FRAME
+  # MARTIAN RULES
+  # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
     @game = MartianBowlingGame.new
   end
