@@ -6,7 +6,7 @@ class VenusianWithCallistoAndTerranBowlingGameTest < Test::Unit::TestCase
   # other rules as callisto with terran:
   # when last roll is 10 you may keep rolling
   setup do
-    @game = VenusianWithCallistoAndTerranBowlingGame.new
+    @game = BowlingGameFactory.create_venusian_and_callisto_and_terran
   end
 
   def test_callisto_final_strikes

@@ -6,7 +6,7 @@ class VenusianWithMartianBowlingGameTest < Test::Unit::TestCase
   # other rules as martian:
   # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
-    @game = VenusianWithMartianBowlingGame.new
+    @game = BowlingGameFactory.create_venusian_and_martian
   end
 
   def test_sum_of_three_rolls

@@ -6,7 +6,7 @@ class CallistoWithMartianBowlingGameTest < Test::Unit::TestCase
   # other rules as martian:
   # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
-    @game = CallistoWithMartianBowlingGame.new
+    @game = BowlingGameFactory.create_callisto_and_martian
   end
 
   def test_martian_and_callisto

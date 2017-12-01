@@ -5,7 +5,7 @@ class VenusianWithTerranBowlingGameTest < Test::Unit::TestCase
   # a pin for first frame, and increase of one each next frame
   # other rules as terran
   setup do
-    @game = VenusianWithTerranBowlingGame.new
+    @game = BowlingGameFactory.create_venusian_and_terran
   end
 
   def test_a_spare

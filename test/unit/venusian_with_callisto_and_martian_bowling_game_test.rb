@@ -7,7 +7,7 @@ class VenusianWithCallistoAndMartianBowlingGameTest < Test::Unit::TestCase
   # when last roll is 12 you may keep rolling
   # 12 FRAMES AND 3 ROLLS FOR FRAME
   setup do
-    @game = VenusianWithCallistoAndMartianBowlingGame.new
+    @game = BowlingGameFactory.create_venusian_and_callisto_and_martian
   end
 
   def test_callisto_final_strikes
